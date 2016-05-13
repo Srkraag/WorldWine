@@ -1,0 +1,17 @@
+﻿<ion-view title="Détail du vigneron" id="page7">
+    <ion-content padding="true" class="has-header">
+        <div class="row">
+            <div class="col col-75">
+                <h2>{{vigneron.name}}</h2>
+            </div>
+            <div class="col col-25">
+                <a id="voir-carte" class="button button-assertive icon-center ion-map" ng-click="carteVignerons(vignerons)"></a>
+            </div>
+        </div>
+            <ion-item class="item-text-wrap">
+                <p>{{vigneron.adr}},  {{vigneron.nip}}, {{vigneron.ville}} </p>
+                <p><a href="{{vigneron.web}}">{{vigneron.web}}</a> </p>
+                <p>{{vigneron.desc}} </p>               
+            </ion-item>
+    </ion-content>
+</ion-view>

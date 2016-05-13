@@ -1,0 +1,32 @@
+<ion-view title="Chercher" id="page3">
+    <ion-content padding="true" class="has-header">
+        <h2 id="chercher-heading2" style="color:#000000;font-weight:400;text-align:center;">Recherche</h2>
+        <div id="chercher-markdown6" style="color:#000000;">
+            <p>Vous pouvez effectuer une recherche par canton ou saisir un texte dans le champs disponible pour effectuer une recherche plus précise par ville, nom de vigneron, ou encore code NIP.</p>
+        </div>
+        <form class="list" ng-submit="trouverVigneron(data)">
+            <label class="item item-select" name="recherche par canton">
+                <span class="input-label">Canton</span>
+                <select  ng-model="data.CNtest" id="CNtest">
+                    <option>choisir</option>
+                    <option>AR</option>
+                    <option>BE</option>
+                    <option>BL</option>
+                    <option>GE</option>
+                    <option>GR</option>
+                    <option>NE</option>
+                    <option>SG</option>
+                    <option>SH</option>
+                    <option>TG</option>
+                    <option>VD</option>
+                    <option>VS</option>
+                </select>
+            </label>
+            <div class="spacer" style="width: 288.667px; height: 23px;"></div>
+            <label class="item item-input">
+                <input type="text" placeholder="votre recherche" ng-model="data.textinput" id="textinput"></input>
+            </label>
+            <button id="chercher-button1" class="button button-assertive  button-block icon-left ion-android-locate" type="submit">Trouver !!</button>
+        </form>
+    </ion-content>
+</ion-view>

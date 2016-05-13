@@ -1,0 +1,14 @@
+<ion-view title="World Wine" id="page4">
+    <ion-content padding="true" class="has-header">
+        <p style="white-space:normal;">L'actualité à découvrir dans nos régions pour les amateurs de vins</p>
+        <p>{{events.length}} manifestations prochainement</p>
+        <ion-list>
+            <ion-item ng-repeat="event in events" class="item-thumbnail-right">
+                <img src="{{event.image}}">
+                <h2>{{event.name}}</h2>
+                <p style="white-space:normal;">du {{event.date_debut}} au {{event.date_fin}}</p>
+                <p style="white-space:normal;">{{event.desc}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

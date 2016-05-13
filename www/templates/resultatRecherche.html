@@ -1,0 +1,17 @@
+﻿<ion-view title="Résultat recherche" id="page8">
+    <ion-content padding="true" class="has-header">
+        <h2 id="liste-vignerons" style="color:#000000;font-weight:400;text-align:center;">Vos résultats</h2>
+        <a id="voir-carte" class="button button-assertive  button-block icon-left ion-map" ng-click="carteVignerons(vignerons)">voir sur la carte</a>
+        <p>{{vignerons.length}} vignerons correspondant à vos critères</p>
+        <p>Les vignerons indiqués d'un <i class="icon icon ion-star energized"></i> sont membre du World Wine Club avec des fiches descriptives plus complètes</p>
+        <ion-list>
+            <ion-item ng-repeat="vigneron in vignerons" ng-click="vigneronDetails(vigneron)">
+                <h3>{{vigneron.name}} <i ng-if="vigneron.membre==1" class="icon icon ion-star energized"></i></h3>
+                <p>{{vigneron.adr}} (environ {{vigneron.dist}} km)</p>
+                <div class="item-icon-right">
+                    <i class="icon ion-chevron-right icon-accessory pull-right"></i>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
